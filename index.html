@@ -1,0 +1,389 @@
+<!doctype html>
+<html lang="fr">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Festi Vivi — Décoration événementielle</title>
+    <meta
+      name="description"
+      content="Festi Vivi : décoration événementielle à Châteauneuf-les-Martigues. Anniversaires, mariages et baptêmes : arches de ballons, chiffres lumineux et décorations sur mesure, avec élégance et originalité."
+    />
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;1,500&family=Poppins:wght@300;400;500;600&family=Playfair+Display:ital,wght@0,400;0,600;0,700;1,400&family=Great+Vibes&display=swap"
+      rel="stylesheet"
+    />
+
+    <link rel="stylesheet" href="style.css" />
+    <!-- Thème Festi Vivi : doit rester APRÈS style.css -->
+    <link rel="stylesheet" href="festivivi.css" />
+  </head>
+  <body>
+    <a href="#main-content" class="skip-link">Aller au contenu principal</a>
+
+    <!-- ============ HEADER ============ -->
+    <header class="site-header" id="site-header">
+      <div class="header__inner">
+        <a href="#accueil" class="logo" aria-label="Festi Vivi, retour à l'accueil">
+          <span class="logo__main logo__script">Festi Vivi</span>
+        </a>
+
+        <nav class="main-nav" id="main-nav" aria-label="Navigation principale">
+          <ul class="main-nav__list">
+            <li><a href="index.html" class="main-nav__link">Accueil</a></li>
+            <li><a href="collections.html" class="main-nav__link">Collections</a></li>
+            <li><a href="#tarifs" class="main-nav__link">Tarifs</a></li>
+            <li><a href="about.html" class="main-nav__link">À propos</a></li>
+            <li><a href="contact.html" class="main-nav__link">Contact</a></li>
+          </ul>
+        </nav>
+
+        <div class="header__actions">
+          <a href="devis.html" class="btn btn--gold btn--small header__cta">Demander un devis</a>
+
+          <button
+            type="button"
+            class="burger"
+            id="burger"
+            aria-expanded="false"
+            aria-controls="main-nav"
+            aria-label="Ouvrir le menu"
+          >
+            <span class="burger__bar"></span>
+            <span class="burger__bar"></span>
+            <span class="burger__bar"></span>
+          </button>
+        </div>
+      </div>
+    </header>
+
+    <main id="main-content">
+      <!-- ============ HERO ============ -->
+      <section class="hero" id="accueil">
+        <!-- IMAGE: remplacer assets/images/hero.webp par une belle photo (arche de ballons) -->
+        <img
+          class="hero__image"
+          src="assets/images/hero.webp"
+          alt="Arche de ballons Festi Vivi"
+          onerror="this.style.display = 'none'"
+        />
+        <div class="hero__overlay" aria-hidden="true"></div>
+
+        <div class="hero__content">
+          <p class="eyebrow eyebrow--on-dark">
+            Festi Vivi - Décoration événementielle
+          </p>
+          <h1 class="hero__title">
+            Nous sublimons vos
+            <span class="hero__typewriter" id="heroTypewriter" aria-live="polite"></span>
+          </h1>
+          <p class="hero__subtitle">
+            Avec élégance et originalité, pour vos plus beaux moments.
+          </p>
+          <a href="#tarifs" class="btn btn--gold hero__btn">Voir nos tarifs</a>
+          <a href="contact.html" class="btn btn--outline hero__btn">Nous contacter</a>
+        </div>
+      </section>
+
+      <!-- ============ PRESTATIONS — CARROUSEL ============ -->
+      <section class="section collections" id="collections">
+        <div class="container">
+          <p class="eyebrow">Nos prestations</p>
+          <h2 class="section__title">Une décoration pensée pour chaque événement</h2>
+          <div class="divider" aria-hidden="true"><span></span></div>
+
+          <div class="carousel">
+            <button class="carousel__arrow carousel__arrow--left" id="carouselPrev" aria-label="Prestation précédente">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m15 18-6-6 6-6" /></svg>
+            </button>
+            <button class="carousel__arrow carousel__arrow--right" id="carouselNext" aria-label="Prestation suivante">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m9 18 6-6-6-6" /></svg>
+            </button>
+
+            <div class="carousel__track">
+              <article class="card">
+                <div class="card__image">
+                  <img src="assets/images/prestation-anniversaire.webp" alt="Décoration d'anniversaire Festi Vivi" loading="lazy" onerror="this.parentElement.classList.add('is-placeholder')" />
+                </div>
+                <div class="card__body">
+                  <h3 class="card__title">Anniversaire</h3>
+                  <p class="card__text">Arches de ballons, chiffres lumineux et décors personnalisés pour une fête inoubliable.</p>
+                  <a href="collections.html#anniversaire" class="card__link">
+                    Voir plus
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14" /><path d="m12 5 7 7-7 7" /></svg>
+                  </a>
+                </div>
+              </article>
+
+              <article class="card">
+                <div class="card__image">
+                  <img src="assets/images/prestation-mariage.webp" alt="Décoration de mariage Festi Vivi" loading="lazy" onerror="this.parentElement.classList.add('is-placeholder')" />
+                </div>
+                <div class="card__body">
+                  <h3 class="card__title">Mariage</h3>
+                  <p class="card__text">Décoration de tables, panneau de bienvenue et ambiances élégantes pour votre grand jour.</p>
+                  <a href="collections.html#mariage" class="card__link">
+                    Voir plus
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14" /><path d="m12 5 7 7-7 7" /></svg>
+                  </a>
+                </div>
+              </article>
+
+              <article class="card">
+                <div class="card__image">
+                  <img src="assets/images/prestation-bapteme.webp" alt="Décoration de baptême Festi Vivi" loading="lazy" onerror="this.parentElement.classList.add('is-placeholder')" />
+                </div>
+                <div class="card__body">
+                  <h3 class="card__title">Baptême</h3>
+                  <p class="card__text">Une décoration pleine de douceur pour célébrer ce moment en famille.</p>
+                  <a href="collections.html#bapteme" class="card__link">
+                    Voir plus
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14" /><path d="m12 5 7 7-7 7" /></svg>
+                  </a>
+                </div>
+              </article>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- ============ TARIFS ============ -->
+      <section class="section pricing" id="tarifs">
+        <div class="container">
+          <p class="eyebrow">Nos prestations &amp; tarifs</p>
+          <h2 class="section__title">Des formules simples et claires</h2>
+          <div class="divider" aria-hidden="true"><span></span></div>
+
+          <ul class="pricing__grid">
+            <li class="price-card">
+              <h3 class="price-card__name">Arche XXL</h3>
+              <p class="price-card__price">400&nbsp;€</p>
+            </li>
+            <li class="price-card">
+              <h3 class="price-card__name">Chiffre lumineux</h3>
+              <p class="price-card__price">50&nbsp;€</p>
+            </li>
+            <li class="price-card">
+              <h3 class="price-card__name">Demi-arche</h3>
+              <p class="price-card__price">280&nbsp;€</p>
+            </li>
+            <li class="price-card">
+              <h3 class="price-card__name">Arche simple personnalisée</h3>
+              <p class="price-card__price">180&nbsp;€</p>
+            </li>
+            <li class="price-card">
+              <h3 class="price-card__name">Forfait arche + déco de 6 tables</h3>
+              <p class="price-card__price">500&nbsp;€</p>
+            </li>
+          </ul>
+          <p class="pricing__note">
+            Un projet particulier ? <a href="devis.html">Demandez un devis personnalisé</a>.
+          </p>
+
+          <ul class="perks">
+            <li class="perk">
+              <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M6 3h12l4 6-10 12L2 9z" /><path d="M2 9h20" /><path d="m8 9 4 12 4-12-3-6" /></svg>
+              <span>Matériel de qualité</span>
+            </li>
+            <li class="perk">
+              <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M19 14c1.49-1.46 3-3.21 3-5.5A5.5 5.5 0 0 0 16.5 3c-1.76 0-3 .5-4.5 2-1.5-1.5-2.74-2-4.5-2A5.5 5.5 0 0 0 2 8.5c0 2.3 1.5 4.05 3 5.5l7 7Z" /></svg>
+              <span>Décoration sur mesure</span>
+            </li>
+            <li class="perk">
+              <svg viewBox="0 0 24 24" aria-hidden="true"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2" /></svg>
+              <span>Prestation clé en main</span>
+            </li>
+            <li class="perk">
+              <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M20 10c0 6-8 12-8 12s-8-6-8-12a8 8 0 0 1 16 0Z" /><circle cx="12" cy="10" r="3" /></svg>
+              <span>Déplacement dans toute la région</span>
+            </li>
+          </ul>
+        </div>
+      </section>
+
+      <!-- ============ REELS FACEBOOK ============ -->
+      <!-- ⚠️ À FAIRE : remplace les 4 liens REMPLACE_ID par les vrais reels de la page Festi Vivi
+           (ouvre un reel sur Facebook > clic droit sur la date > « Copier l'adresse du lien »).
+           Les vidéos clip-1.mp4 à clip-4.mp4 se génèrent avec download_clips.py. -->
+      <section class="section instagram" id="reels">
+        <div class="container">
+          <p class="eyebrow">Facebook</p>
+          <h2 class="section__title">Découvrez nos réalisations en vidéo</h2>
+          <div class="divider" aria-hidden="true"><span></span></div>
+
+          <div class="instagram__grid">
+            <figure class="ig-card">
+              <div class="ig-card__media">
+                <video class="ig-card__video" muted loop playsinline preload="none" poster="assets/images/clip-1-poster.webp">
+                  <source src="assets/videos/clip-1.mp4" type="video/mp4" />
+                </video>
+                <button type="button" class="ig-card__play" aria-label="Lire la vidéo 1"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M8 5v14l11-7z" /></svg></button>
+              </div>
+              <a class="ig-card__reel-link" href="https://www.facebook.com/reel/REMPLACE_ID_1" target="_blank" rel="noopener noreferrer">
+                Voir le reel
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14" /><path d="m12 5 7 7-7 7" /></svg>
+              </a>
+            </figure>
+
+            <figure class="ig-card">
+              <div class="ig-card__media">
+                <video class="ig-card__video" muted loop playsinline preload="none" poster="assets/images/clip-2-poster.webp">
+                  <source src="assets/videos/clip-2.mp4" type="video/mp4" />
+                </video>
+                <button type="button" class="ig-card__play" aria-label="Lire la vidéo 2"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M8 5v14l11-7z" /></svg></button>
+              </div>
+              <a class="ig-card__reel-link" href="https://www.facebook.com/reel/REMPLACE_ID_2" target="_blank" rel="noopener noreferrer">
+                Voir le reel
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14" /><path d="m12 5 7 7-7 7" /></svg>
+              </a>
+            </figure>
+
+            <figure class="ig-card">
+              <div class="ig-card__media">
+                <video class="ig-card__video" muted loop playsinline preload="none" poster="assets/images/clip-3-poster.webp">
+                  <source src="assets/videos/clip-3.mp4" type="video/mp4" />
+                </video>
+                <button type="button" class="ig-card__play" aria-label="Lire la vidéo 3"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M8 5v14l11-7z" /></svg></button>
+              </div>
+              <a class="ig-card__reel-link" href="https://www.facebook.com/reel/REMPLACE_ID_3" target="_blank" rel="noopener noreferrer">
+                Voir le reel
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14" /><path d="m12 5 7 7-7 7" /></svg>
+              </a>
+            </figure>
+
+            <figure class="ig-card">
+              <div class="ig-card__media">
+                <video class="ig-card__video" muted loop playsinline preload="none" poster="assets/images/clip-4-poster.webp">
+                  <source src="assets/videos/clip-4.mp4" type="video/mp4" />
+                </video>
+                <button type="button" class="ig-card__play" aria-label="Lire la vidéo 4"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M8 5v14l11-7z" /></svg></button>
+              </div>
+              <a class="ig-card__reel-link" href="https://www.facebook.com/reel/REMPLACE_ID_4" target="_blank" rel="noopener noreferrer">
+                Voir le reel
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14" /><path d="m12 5 7 7-7 7" /></svg>
+              </a>
+            </figure>
+          </div>
+
+          <a href="https://www.facebook.com/people/Festi-vivi/100068612711866/" target="_blank" rel="noopener noreferrer" class="btn btn--gold instagram__btn">Suivre Festi Vivi sur Facebook</a>
+        </div>
+      </section>
+
+      <!-- ============ À PROPOS ============ -->
+      <section class="section approach" id="approche">
+        <div class="container approach__inner">
+          <div class="approach__media">
+            <!-- IMAGE: assets/images/approche.webp -->
+            <img src="assets/images/approche.webp" alt="Installation d'une décoration Festi Vivi" loading="lazy" onerror="this.parentElement.classList.add('is-placeholder')" />
+          </div>
+          <div class="approach__content">
+            <p class="eyebrow">À propos</p>
+            <h2 class="section__title section__title--left">Vos plus beaux moments, sublimés</h2>
+            <p class="approach__text">
+              Festi Vivi imagine et installe des décorations événementielles sur mesure pour vos anniversaires, mariages et baptêmes.
+
+              Du choix des couleurs à l'installation sur place, tout est pensé avec élégance et originalité, pour une prestation clé en main et sans stress.
+            </p>
+            <p class="approach__signature">— L'équipe Festi Vivi</p>
+          </div>
+        </div>
+      </section>
+
+      <!-- ============ GALERIE ============ -->
+      <section class="section gallery" id="galerie">
+        <div class="container">
+          <p class="eyebrow">Nos créations</p>
+          <h2 class="section__title">Quelques-unes de nos réalisations</h2>
+          <div class="divider" aria-hidden="true"><span></span></div>
+
+          <div class="gallery__slider" id="gallery-slider">
+            <div class="gallery__track" id="gallery-track">
+              <!-- IMAGES: assets/images/gallery-1.webp à gallery-6.webp -->
+              <div class="gallery__slide"><img src="assets/images/gallery-1.webp" alt="Création Festi Vivi 1" loading="lazy" onerror="this.parentElement.classList.add('is-placeholder')" /></div>
+              <div class="gallery__slide"><img src="assets/images/gallery-2.webp" alt="Création Festi Vivi 2" loading="lazy" onerror="this.parentElement.classList.add('is-placeholder')" /></div>
+              <div class="gallery__slide"><img src="assets/images/gallery-3.webp" alt="Création Festi Vivi 3" loading="lazy" onerror="this.parentElement.classList.add('is-placeholder')" /></div>
+              <div class="gallery__slide"><img src="assets/images/gallery-4.webp" alt="Création Festi Vivi 4" loading="lazy" onerror="this.parentElement.classList.add('is-placeholder')" /></div>
+              <div class="gallery__slide"><img src="assets/images/gallery-5.webp" alt="Création Festi Vivi 5" loading="lazy" onerror="this.parentElement.classList.add('is-placeholder')" /></div>
+              <div class="gallery__slide"><img src="assets/images/gallery-6.webp" alt="Création Festi Vivi 6" loading="lazy" onerror="this.parentElement.classList.add('is-placeholder')" /></div>
+            </div>
+
+            <button type="button" class="gallery__arrow gallery__arrow--prev" id="gallery-prev" aria-label="Image précédente">
+              <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M15 18l-6-6 6-6" /></svg>
+            </button>
+            <button type="button" class="gallery__arrow gallery__arrow--next" id="gallery-next" aria-label="Image suivante">
+              <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M9 18l6-6-6-6" /></svg>
+            </button>
+          </div>
+
+          <div class="gallery__cta">
+            <a href="https://www.facebook.com/people/Festi-vivi/100068612711866/" target="_blank" rel="noopener noreferrer" class="btn btn--gold">Voir plus sur Facebook</a>
+          </div>
+        </div>
+      </section>
+
+      <!-- ============ CONTACT ============ -->
+      <section class="section contact" id="contact">
+        <div class="container contact__inner">
+          <p class="eyebrow eyebrow--on-dark">Contact</p>
+          <h2 class="section__title section__title--on-dark">Parlons de votre événement</h2>
+          <p class="contact__text">
+            Un projet, une envie, une question ? Appelez-nous ou écrivez-nous sur WhatsApp, nous vous répondons avec plaisir.
+          </p>
+
+          <div class="contact__actions">
+            <a href="https://wa.me/33752413764" target="_blank" rel="noopener noreferrer" class="btn btn--gold contact__btn">
+              <svg class="contact__btn-icon" viewBox="0 0 32 32" aria-hidden="true">
+                <path d="M16.001 3C9.373 3 4 8.373 4 15c0 2.386.696 4.607 1.897 6.475L4 29l7.72-1.86A11.94 11.94 0 0 0 16 27c6.628 0 12-5.373 12-12S22.629 3 16.001 3zm0 21.8a9.76 9.76 0 0 1-4.98-1.363l-.357-.213-4.583 1.104 1.223-4.47-.232-.367A9.76 9.76 0 0 1 6.2 15c0-5.404 4.397-9.8 9.801-9.8 5.403 0 9.8 4.396 9.8 9.8 0 5.404-4.397 9.8-9.8 9.8zm5.377-7.34c-.294-.147-1.74-.859-2.01-.957-.27-.098-.466-.147-.663.147-.196.294-.76.957-.933 1.153-.172.196-.343.22-.637.073-.294-.147-1.24-.457-2.362-1.457-.873-.779-1.463-1.74-1.635-2.034-.172-.294-.018-.453.129-.6.132-.132.294-.343.441-.514.147-.172.196-.294.294-.49.098-.196.049-.367-.024-.514-.073-.147-.663-1.597-.909-2.187-.239-.574-.482-.497-.663-.506l-.564-.01c-.196 0-.514.073-.784.367-.27.294-1.03 1.006-1.03 2.455 0 1.448 1.055 2.848 1.202 3.044.147.196 2.076 3.17 5.032 4.444.703.303 1.251.484 1.679.62.705.224 1.347.192 1.854.117.566-.084 1.74-.712 1.985-1.4.245-.69.245-1.28.172-1.4-.073-.122-.269-.196-.563-.343z" />
+              </svg>
+              <span>WhatsApp</span>
+            </a>
+            <a href="tel:+33752413764" class="btn btn--outline contact__btn"><span>07 52 41 37 64</span></a>
+          </div>
+
+          <ul class="contact__infos">
+            <li>
+              <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 2C7.6 2 4 5.6 4 10c0 5.4 8 12 8 12s8-6.6 8-12c0-4.4-3.6-8-8-8zm0 11a3 3 0 1 1 0-6 3 3 0 0 1 0 6z" /></svg>
+              <span>12 impasse des Dahlias, 13220 Châteauneuf-les-Martigues</span>
+            </li>
+          </ul>
+        </div>
+      </section>
+    </main>
+
+    <!-- ============ FOOTER ============ -->
+    <footer class="site-footer">
+      <div class="container site-footer__inner">
+        <div class="site-footer__brand">
+          <span class="logo__main logo__script">Festi Vivi</span>
+          <span class="logo__sub">Décoration événementielle</span>
+        </div>
+        <p class="site-footer__tagline">
+          Anniversaire, mariage, baptême : nous sublimons vos plus beaux moments avec élégance et originalité
+        </p>
+        <div class="site-footer__socials">
+          <a href="https://www.facebook.com/people/Festi-vivi/100068612711866/" target="_blank" rel="noopener noreferrer" aria-label="Facebook Festi Vivi">
+            <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z" /></svg>
+          </a>
+          <!-- Instagram : ajoute le lien du compte ici quand tu l'as -->
+          <a href="https://wa.me/33752413764" target="_blank" rel="noopener noreferrer" aria-label="WhatsApp Festi Vivi">
+            <svg viewBox="0 0 32 32" aria-hidden="true"><path d="M16.001 3C9.373 3 4 8.373 4 15c0 2.386.696 4.607 1.897 6.475L4 29l7.72-1.86A11.94 11.94 0 0 0 16 27c6.628 0 12-5.373 12-12S22.629 3 16.001 3z" fill="none" stroke="currentColor" stroke-width="1.5" /></svg>
+          </a>
+        </div>
+        <p class="site-footer__copy">
+          © <span id="current-year">2026</span> Festi Vivi. Tous droits réservés.
+        </p>
+      </div>
+    </footer>
+
+    <!-- ============ BOUTON WHATSAPP FLOTTANT ============ -->
+    <a href="https://wa.me/33752413764" target="_blank" rel="noopener noreferrer" class="whatsapp-float" aria-label="Contacter Festi Vivi sur WhatsApp">
+      <svg viewBox="0 0 32 32" aria-hidden="true">
+        <path d="M16.001 3C9.373 3 4 8.373 4 15c0 2.386.696 4.607 1.897 6.475L4 29l7.72-1.86A11.94 11.94 0 0 0 16 27c6.628 0 12-5.373 12-12S22.629 3 16.001 3zm0 21.8a9.76 9.76 0 0 1-4.98-1.363l-.357-.213-4.583 1.104 1.223-4.47-.232-.367A9.76 9.76 0 0 1 6.2 15c0-5.404 4.397-9.8 9.801-9.8 5.403 0 9.8 4.396 9.8 9.8 0 5.404-4.397 9.8-9.8 9.8zm5.377-7.34c-.294-.147-1.74-.859-2.01-.957-.27-.098-.466-.147-.663.147-.196.294-.76.957-.933 1.153-.172.196-.343.22-.637.073-.294-.147-1.24-.457-2.362-1.457-.873-.779-1.463-1.74-1.635-2.034-.172-.294-.018-.453.129-.6.132-.132.294-.343.441-.514.147-.172.196-.294.294-.49.098-.196.049-.367-.024-.514-.073-.147-.663-1.597-.909-2.187-.239-.574-.482-.497-.663-.506l-.564-.01c-.196 0-.514.073-.784.367-.27.294-1.03 1.006-1.03 2.455 0 1.448 1.055 2.848 1.202 3.044.147.196 2.076 3.17 5.032 4.444.703.303 1.251.484 1.679.62.705.224 1.347.192 1.854.117.566-.084 1.74-.712 1.985-1.4.245-.69.245-1.28.172-1.4-.073-.122-.269-.196-.563-.343z" />
+      </svg>
+    </a>
+
+    <script src="script.js"></script>
+  </body>
+</html>

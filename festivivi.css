@@ -1,0 +1,191 @@
+/* ==========================================================================
+   FESTI VIVI — thème
+   À charger APRÈS style.css : il remplace la palette MV Événement
+   (crème / doré / noir, comme sur le flyer) et ajoute la section tarifs.
+   ========================================================================== */
+
+:root {
+  --color-ink: #17120e;
+  --color-ink-light: #3a2e22;
+  --color-cream: #f7efe1;
+  --color-cream-dark: #efe2cc;
+  --color-surface: #fffdf8;
+  --color-text: #2c2219;
+  --color-text-muted: #75664f;
+  --color-gold: #b8893a;
+  --color-gold-dark: #94691f;
+  --color-gold-light: #c9a04e;
+  --color-burgundy: #8a5a2b;
+  --color-border: rgba(44, 34, 25, 0.14);
+}
+
+/* ---------- Header + logo en écriture manuscrite ---------- */
+
+.site-header {
+  background: rgba(247, 239, 225, 0.95);
+}
+
+.logo__script {
+  font-family: "Great Vibes", cursive;
+  font-size: 2.3rem;
+  font-weight: 400;
+  line-height: 1;
+  color: var(--color-gold-dark);
+}
+
+.logo:not(:has(img))::after {
+  display: none;
+}
+
+.site-footer__brand .logo__script {
+  color: var(--color-gold-light);
+  font-size: 2.8rem;
+}
+
+/* ---------- Boutons lisibles sur fond sombre ---------- */
+
+.hero .btn--gold,
+.contact .btn--gold {
+  background: var(--color-gold);
+  color: var(--color-ink);
+}
+
+.hero .btn--gold:hover,
+.contact .btn--gold:hover {
+  background: var(--color-cream);
+}
+
+.contact .btn--outline {
+  color: var(--color-white);
+}
+
+.contact__actions {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: var(--space-sm);
+}
+
+.contact__actions .btn {
+  margin: 0;
+}
+
+.hero__subtitle {
+  max-width: 48ch;
+  margin: 0 auto var(--space-md);
+  color: rgba(255, 255, 255, 0.88);
+  font-size: 1.1rem;
+}
+
+/* ---------- Tarifs ---------- */
+
+.pricing {
+  background: var(--color-surface);
+}
+
+.pricing__grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(190px, 1fr));
+  gap: var(--space-sm);
+  margin-top: var(--space-lg);
+}
+
+.price-card {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 0.6rem;
+  min-height: 170px;
+  padding: var(--space-md) var(--space-sm);
+  text-align: center;
+  background: var(--color-cream);
+  border: 1px solid var(--color-gold);
+  border-radius: var(--radius-md);
+  transition:
+    transform var(--transition-mid),
+    box-shadow var(--transition-mid);
+}
+
+.price-card:hover {
+  transform: translateY(-5px);
+  box-shadow: var(--shadow-strong);
+}
+
+.price-card__name {
+  font-family: var(--font-display);
+  font-size: 1.3rem;
+  font-weight: 600;
+  line-height: 1.25;
+}
+
+.price-card__price {
+  font-family: var(--font-display);
+  font-size: 2.4rem;
+  font-weight: 700;
+  line-height: 1;
+  color: var(--color-gold-dark);
+}
+
+.pricing__note {
+  margin-top: var(--space-md);
+  text-align: center;
+  color: var(--color-text-muted);
+  font-size: 0.95rem;
+}
+
+.pricing__note a {
+  color: var(--color-gold-dark);
+  font-weight: 500;
+  text-decoration: underline;
+  text-underline-offset: 4px;
+}
+
+/* ---------- Points forts ---------- */
+
+.perks {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: var(--space-sm);
+  margin-top: var(--space-lg);
+  padding-top: var(--space-md);
+  border-top: 1px solid var(--color-border);
+}
+
+.perk {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.7rem;
+  font-size: 0.85rem;
+  font-weight: 500;
+  line-height: 1.3;
+}
+
+.perk svg {
+  flex-shrink: 0;
+  width: 34px;
+  height: 34px;
+  fill: none;
+  stroke: var(--color-gold-dark);
+  stroke-width: 1.5;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+}
+
+@media (max-width: 860px) {
+  .perks {
+    grid-template-columns: repeat(2, 1fr);
+    gap: var(--space-md) var(--space-sm);
+  }
+}
+
+@media (max-width: 480px) {
+  .perks {
+    grid-template-columns: 1fr;
+  }
+
+  .perk {
+    justify-content: flex-start;
+  }
+}
