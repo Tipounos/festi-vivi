@@ -360,3 +360,103 @@ function initCollectionFilters() {
   window.addEventListener('hashchange', () => select(location.hash.slice(1), { updateHash: false }));
   select(location.hash.slice(1) || 'all', { animate: false, updateHash: false });
 }
+
+/* ==========================================================================
+   LIRE PLUS / LIRE MOINS — avis clients
+   Coupe les avis trop longs à 5 lignes et ajoute un bouton pour tout lire.
+   Le bouton n'apparaît que si l'avis est vraiment plus long que ça.
+   Autonome : il injecte lui-même son CSS, rien d'autre à modifier.
+
+   À charger APRÈS script.js :
+   <script src="lire-plus.js"></script>
+   ========================================================================== */
+
+(function () {
+  const MAX_LINES = 5;
+
+  const style = document.createElement('style');
+  style.textContent = `
+    .reviews__grid { align-items: flex-start; }
+
+    .review-card__text.is-clamped {
+      display: -webkit-box;
+      -webkit-box-orient: vertical;
+      -webkit-line-clamp: ${MAX_LINES};
+      line-clamp: ${MAX_LINES};
+      overflow: hidden;
+    }
+
+    .review-card__more {
+      margin-top: 0.8rem;
+      padding: 0;
+      font-family: var(--font-body);
+      font-size: 0.9rem;
+      font-weight: 600;
+      color: var(--color-gold-dark);
+      text-decoration: underline;
+      text-underline-offset: 4px;
+    }
+
+    .review-card__more:hover {
+      color: var(--color-burgundy);
+    }
+  `;
+  document.head.appendChild(style);
+
+  function run() {
+    const items = [];
+
+    document.querySelectorAll('.review-card__text').forEach((text, i) => {
+      if (!text.id) text.id = 'review-text-' + (i + 1);
+
+      const btn = document.createElement('button');
+      btn.type = 'button';
+      btn.className = 'review-card__more';
+      btn.hidden = true;
+      btn.setAttribute('aria-controls', text.id);
+      btn.setAttribute('aria-expanded', 'false');
+      btn.textContent = 'Lire plus';
+      text.after(btn);
+
+      const item = { text, btn, expanded: false };
+      btn.addEventListener('click', () => {
+        item.expanded = !item.expanded;
+        apply(item);
+      });
+      items.push(item);
+    });
+
+    function apply(item) {
+      const { text, btn, expanded } = item;
+
+      if (expanded) {
+        text.classList.remove('is-clamped');
+        btn.textContent = 'Lire moins';
+        btn.setAttribute('aria-expanded', 'true');
+        btn.hidden = false;
+        return;
+      }
+
+      // On coupe, puis on vérifie s'il y a vraiment du texte caché
+      text.classList.add('is-clamped');
+      const overflows = text.scrollHeight > text.clientHeight + 1;
+      btn.hidden = !overflows;
+      if (!overflows) text.classList.remove('is-clamped');
+      btn.textContent = 'Lire plus';
+      btn.setAttribute('aria-expanded', 'false');
+    }
+
+    items.forEach(apply);
+
+    // Les retours à la ligne changent avec la largeur de l'écran
+    let timer;
+    window.addEventListener('resize', () => {
+      clearTimeout(timer);
+      timer = setTimeout(() => items.forEach(apply), 150);
+    });
+  }
+
+  // On attend le chargement complet (polices incluses) pour mesurer juste
+  if (document.readyState === 'complete') run();
+  else window.addEventListener('load', run);
+})();

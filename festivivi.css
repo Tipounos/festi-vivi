@@ -44,13 +44,11 @@
 
 /* ---------- Boutons lisibles sur fond sombre ---------- */
 
-.hero .btn--gold,
 .contact .btn--gold {
   background: var(--color-gold);
   color: var(--color-ink);
 }
 
-.hero .btn--gold:hover,
 .contact .btn--gold:hover {
   background: var(--color-cream);
 }
@@ -188,4 +186,55 @@
   .perk {
     justify-content: flex-start;
   }
+}
+
+/* ---------- Boutons du hero (même style que Le Petit Atelier) ---------- */
+
+.hero__actions {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1.1rem;
+}
+
+.hero__actions .btn {
+  margin: 0;
+  font-size: 1.05rem;
+  padding: 0.95em 2.4em;
+}
+
+@media (min-width: 641px) {
+  .hero__actions {
+    flex-direction: row;
+    justify-content: center;
+  }
+}
+
+.hero .btn--gold {
+  background: #000;
+  color: var(--color-white);
+  box-shadow: none;
+}
+
+.hero .btn--gold:hover {
+  background: var(--color-gold-dark);
+}
+
+.hero .btn--outline {
+  border-color: rgba(255, 255, 255, 0.9);
+  color: var(--color-white);
+  background: rgba(255, 255, 255, 0.08);
+}
+
+.hero .btn--outline:hover {
+  background: var(--color-white);
+  color: var(--color-ink);
+}
+
+/* ---------- Avis Google ---------- */
+
+.reviews__btn {
+  display: flex;
+  width: fit-content;
+  margin: var(--space-md) auto 0;
 }

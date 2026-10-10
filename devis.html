@@ -3,18 +3,18 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Demander un devis — MV Événement | Décoration événementielle à Gignac-la-Nerthe</title>
+    <title>Demander un devis — Festi Vivi | Décoration événementielle à Châteauneuf-les-Martigues</title>
     <meta
       name="description"
-      content="Demandez votre devis gratuit à MV Événement : décoration et organisation d'événements sur mesure. Décrivez votre projet, Vanessa vous répond rapidement."
+      content="Demandez votre devis à Festi Vivi : décoration événementielle sur mesure pour anniversaires, mariages et baptêmes. Décrivez votre projet, nous vous répondons rapidement."
     />
-    <meta name="theme-color" content="#2a1a20" />
+    <meta name="theme-color" content="#17120e" />
 
     <!-- Open Graph (ajoute og:image et og:url une fois le nom de domaine connu) -->
     <meta property="og:type" content="website" />
     <meta property="og:locale" content="fr_FR" />
-    <meta property="og:site_name" content="MV Événement" />
-    <meta property="og:title" content="Demander un devis — MV Événement" />
+    <meta property="og:site_name" content="Festi Vivi" />
+    <meta property="og:title" content="Demander un devis — Festi Vivi" />
     <meta
       property="og:description"
       content="Parlez-nous de votre événement : nous imaginons un décor sur mesure et vous envoyons un devis."
@@ -36,7 +36,7 @@
     <!-- ============ HEADER ============ -->
     <header class="site-header" id="site-header">
       <div class="header__inner">
-        <a href="#accueil" class="logo" aria-label="Festi Vivi, retour à l'accueil">
+        <a href="index.html" class="logo" aria-label="Festi Vivi, retour à l'accueil">
           <span class="logo__main logo__script">Festi Vivi</span>
         </a>
 
@@ -44,7 +44,6 @@
           <ul class="main-nav__list">
             <li><a href="index.html" class="main-nav__link">Accueil</a></li>
             <li><a href="collections.html" class="main-nav__link">Collections</a></li>
-            <li><a href="#tarifs" class="main-nav__link">Tarifs</a></li>
             <li><a href="about.html" class="main-nav__link">À propos</a></li>
             <li><a href="contact.html" class="main-nav__link">Contact</a></li>
           </ul>
@@ -81,7 +80,7 @@
           <img
             class="devis__image"
             src="assets/images/devis.jpg"
-            alt="Décoration événementielle réalisée par MV Événement"
+            alt="Décoration événementielle réalisée par Festi Vivi"
           />
 
           <!-- ⚠️ À CONFIGURER : remplace l'action par ton service d'envoi (Formspree, Netlify Forms, PHP...) -->
@@ -110,11 +109,9 @@
               <span class="devis__label">Type d'événement <span aria-hidden="true">*</span></span>
               <select name="type" id="type" required>
                 <option value="" disabled selected>Choisir un type</option>
-                <option>Mariage</option>
                 <option>Anniversaire</option>
-                <option>Baptême / Communion</option>
-                <option>Baby shower / Gender reveal</option>
-                <option>Événement d'entreprise</option>
+                <option>Mariage</option>
+                <option>Baptême</option>
                 <option>Autre</option>
               </select>
             </label>
@@ -155,11 +152,10 @@
                 <span class="devis__label">Budget estimé</span>
                 <select name="budget" id="budget">
                   <option value="" selected>Je ne sais pas encore</option>
-                  <option>Moins de 500 €</option>
+                  <option>Moins de 200 €</option>
+                  <option>200 € – 500 €</option>
                   <option>500 € – 1 000 €</option>
-                  <option>1 000 € – 2 500 €</option>
-                  <option>2 500 € – 5 000 €</option>
-                  <option>Plus de 5 000 €</option>
+                  <option>Plus de 1 000 €</option>
                 </select>
               </label>
             </div>
@@ -178,11 +174,10 @@
               <span class="devis__label">Comment nous avez-vous connus ?</span>
               <select name="source" id="source">
                 <option value="" selected>Choisir une réponse</option>
-                <option>Instagram</option>
+                <option>Facebook</option>
                 <option>Google</option>
                 <option>Bouche à oreille</option>
                 <option>WhatsApp</option>
-                <option>Un événement où vous étiez présents</option>
                 <option>Autre</option>
               </select>
             </label>
@@ -219,7 +214,6 @@
           <a href="https://www.facebook.com/people/Festi-vivi/100068612711866/" target="_blank" rel="noopener noreferrer" aria-label="Facebook Festi Vivi">
             <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z" /></svg>
           </a>
-          <!-- Instagram : ajoute le lien du compte ici quand tu l'as -->
           <a href="https://wa.me/33752413764" target="_blank" rel="noopener noreferrer" aria-label="WhatsApp Festi Vivi">
             <svg viewBox="0 0 32 32" aria-hidden="true"><path d="M16.001 3C9.373 3 4 8.373 4 15c0 2.386.696 4.607 1.897 6.475L4 29l7.72-1.86A11.94 11.94 0 0 0 16 27c6.628 0 12-5.373 12-12S22.629 3 16.001 3z" fill="none" stroke="currentColor" stroke-width="1.5" /></svg>
           </a>
